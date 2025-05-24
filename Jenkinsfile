@@ -16,5 +16,12 @@ pipeline {
                sh 'mvn clean package'
             }
         }
+
+        stage('K8S deploy') {
+    steps {
+        sh 'export KUBECONFIG=/var/lib/jenkins/.kube/config && kubectl apply -f k8s-deploy.yml'
+    }
+}
+
     }
 }
