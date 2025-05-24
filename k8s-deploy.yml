@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mavenwebappcontainer
-       image: renukaaa/mavenwebapp:latest   # This will be replaced in Jenkinsfile dynamically
+        image: renukaaa/mavenwebapp:latest
         ports:
         - containerPort: 8080
 
